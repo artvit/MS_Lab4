@@ -50,10 +50,14 @@ public class MainActivity extends AppCompatActivity implements GestureOverlayVie
         this.gestures = (GestureOverlayView) findViewById(R.id.gestureOverlayView);
         gestures.addOnGesturePerformedListener(this);
 
+        number = (new Random()).nextInt(100) + 1;
+        gameEnded = false;
+
         infoTextView = (TextView) findViewById(R.id.infoTextView);
         numberEditTextWrapper = (TextInputLayout) findViewById(R.id.numberEditTextWrapper);
         numberEditText = (EditText) findViewById(R.id.editText);
         button = (Button) findViewById(R.id.button);
+
         this.button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
